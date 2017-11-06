@@ -12,7 +12,7 @@ RUN  yum -y install rsyslog && \
 
 COPY rsyslog.conf /etc/rsyslog.conf
 
-EXPOSE 514
+EXPOSE 1514
 
 CMD ["sh", "-c", "/usr/sbin/rsyslogd -i ${PID_DIR}/pid -n"]
 
